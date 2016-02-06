@@ -38,7 +38,7 @@ Array.prototype.shuffle = function() {
     return this
 }
 
-console.log("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/LoeiFy")
+console.log("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/J3n5en")
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -99,7 +99,7 @@ window.onload = function() {
                 _start ++
                 _time()
             }
-        }, 100)
+        }, 60)
 
     }).call(this)
 
