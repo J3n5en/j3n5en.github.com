@@ -99,7 +99,7 @@ window.onload = function() {
                 _start ++
                 _time()
             }
-        }, 60)
+        }, 40)
 
     }).call(this)
 
