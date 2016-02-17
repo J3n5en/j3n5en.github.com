@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Canvas Resize</title>
+    <style type="text/css">
+        html,body{margin:0;height: 100%}
+    </style>
+    <script type="text/javascript">
+        function resize_canvas(){
+            canvas = document.getElementById("canvas");
+            if (canvas.width  < window.innerWidth)
+            {
+                canvas.width  = window.innerWidth;
+            }
+ 
+            if (canvas.height < window.innerHeight)
+            {
+                canvas.height = window.innerHeight;
+            }
+            var cxt = canvas.getContext("2d");
+            cxt.fillStyle="#000";
+            cxt.beginPath();
+            cxt.moveTo(0,0);
+            cxt.lineTo(canvas.width/3,0);
+            cxt.lineTo(canvas.width*2/3,canvas.height);
+            cxt.lineTo(0,canvas.height);
+            cxt.stroke();
+            cxt.closePath();
+            cxt.fill();
+        }
+    </script>
+</head>
+ 
+<body onload="resize_canvas()" onresize="resize_canvas()">
+        <canvas width="200" height="100" id="canvas">Your browser doesn't support canvas</canvas>
+</body>
+
+</html>
